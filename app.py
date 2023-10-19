@@ -21,6 +21,7 @@ def run_query(query):
 rows = run_query('''SELECT * FROM `sunpower-375201.sunpower_agg.sunpower_full_funnel` WHERE Date = "2023-10-17" LIMIT 10''')
 
 # Print results.
+st.header("Show a cell from each row individually")
 st.write("Query Results:")
 for row in rows:
     st.write("✍️ " + row['Campaign'])
@@ -31,4 +32,5 @@ import pandas
 query = '''SELECT * FROM `sunpower-375201.sunpower_agg.sunpower_full_funnel` WHERE Date = "2023-10-17" LIMIT 10'''
 df = pandas.read_gbq(query, credentials=credentials)
 
+st.header("Write Query as a dataframe w/ pandas")
 st.write(df)
