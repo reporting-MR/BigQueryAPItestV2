@@ -28,6 +28,7 @@ for row in rows:
 import pandas_gbq
 import pandas 
 
+query = '''SELECT * FROM `sunpower-375201.sunpower_agg.sunpower_full_funnel` WHERE Date = "2023-10-17" LIMIT 10'''
 df = pandas.read_gbq(query, credentials=credentials)
 
 st.write(df)
