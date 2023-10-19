@@ -24,4 +24,4 @@ rows = run_query('''SELECT * FROM `sunpower-375201.sunpower_agg.sunpower_full_fu
 # Print results.
 st.write("Query Results:")
 for row in rows:
-    st.write("✍️ " + row['word'])
+    st.write("✍️ " + row['Campaign'])
