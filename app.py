@@ -1,5 +1,4 @@
 import streamlit as st
-#import pandas_gbq
 from google.oauth2 import service_account
 from google.cloud import bigquery
 
@@ -25,3 +24,9 @@ rows = run_query('''SELECT * FROM `sunpower-375201.sunpower_agg.sunpower_full_fu
 st.write("Query Results:")
 for row in rows:
     st.write("✍️ " + row['Campaign'])
+
+import pandas_gbq
+
+df = pandas.read_gbq(query, credentials=credentials)
+
+st.write(df)
