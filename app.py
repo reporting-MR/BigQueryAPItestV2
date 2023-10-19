@@ -26,6 +26,7 @@ for row in rows:
     st.write("✍️ " + row['Campaign'])
 
 import pandas_gbq
+import pandas 
 
 df = pandas.read_gbq(query, credentials=credentials)
 
